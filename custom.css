@@ -1,122 +1,120 @@
-*{
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family:"Gilroy";
-    box-sizing: 0;
-
 }
 
-html,body{
-    width: 100%;
-    height: 100%;
-}
-#main{
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
     display: flex;
-    height: 100%;
-    width: 100%;
-   
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
 }
-#left{
-    width: 60%;
-    height: 100%;
-    position: relative;
-    
-}
-#lnav{
+
+#main {
     display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 20px 1px ;
-    
-}
-#lnavr a{
-    margin-right: 10px;
-    text-decoration: none;
-    color: black;
-    font-weight: 500px;
-    font-size: 14px;
-
+    width: 90%;
+    max-width: 1200px;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-#lnavr i{
-    color: royalblue;
+#left {
+    flex: 1;
+    padding: 20px;
+    background: #333;
+    color: white;
 }
-#lnavr{
+
+#lnav {
     display: flex;
     align-items: center;
 }
 
-#left #textcenter{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+#lnavr {
+    margin-left: 10px;
 }
-#textcenter h1{
-    font-size: 90px;
-    font-weight: 900;
+
+#lnavr a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
 }
-#textcenter p{
-    opacity: .6;
-    font-size: 12px;
-    line-height: 20px;
-    margin-top: 20px;
+
+#textcenter {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#textcenter h1 {
+    font-size: 2.5em;
+}
+
+#textcenter p {
+    margin: 20px 0;
+}
+
+#textcenter a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #ff5722;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#right {
+    flex: 2;
+    padding: 20px;
+}
+
+#rtop {
+    display: flex;
+    justify-content: space-between;
     margin-bottom: 20px;
 }
-#textcentr a{
-    text-decoration: none;
-    color: #000;
-    border-bottom: 1px solid #000 ;
-    padding-bottom: 5px;
-    font-size: 13px;
-    font-weight: 600;
+
+#rtopleft {
+    flex: 1;
 }
-#right{
-    width: 60%;
-    height: 100%;
-    background-color: white;
-}
-#rtop{
+
+#rtopright {
+    flex: 1;
     display: flex;
-    width: 100%;
-    height: 50%;
-    
+    justify-content: center;
+    align-items: center;
 }
 
-#rtopleft{
-    width: 55%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    background-image: url(Photos/mala.jpg);
-
-}
-#rtopright{
-    width: 45%;
-    height: 100%;
-    background-image: url(Photos/drone-mala.jpg);
-    background-size: cover;
-    background-position: bottom;
-}
-#rbottom{
-    width: 100%;
-    height: 50%;
-    background-image: url(Photos/drone-mmala.jpg) ;
-    background-position: center;
-    background-size: cover;
+#rtopright img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
 
-/* =====Ressponsive Code ========*/
-@media(max-width:500px){
-    #main{
+#rbottom {
+    margin-top: 20px;
+}
+
+#rbottom h2 {
+    margin-bottom: 10px;
+}
+
+#rbottom a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #ff5722;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    #main {
         flex-direction: column;
-
-    }
-    #main #left{
-        width: 100%;
     }
 
-    #main #right{
-        width: 100%;
-    }
-}
+    #left,
